@@ -1,0 +1,5 @@
+rootProject.name = 'trivagoflux'
+include 'integration'
+include 'impl'
+include 'contract'
+
