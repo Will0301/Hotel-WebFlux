@@ -1,0 +1,17 @@
+dependencies{
+    implementation project(':integration')
+}
+apply plugin: 'jacoco'
+
+
+tasks.named('test') {
+    useJUnitPlatform()
+    finalizedBy 'jacocoTestReport'
+}
+
+jacocoTestReport {
+    reports {
+        xml.required = true
+        html.required = true
+    }
+}
